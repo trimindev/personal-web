@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-darkgray-8 bg-darkwhite-9 dark:text-darkwhite-9 text-darkgray-8;
+  }
+
+  a {
+    @apply dark:hover:text-violet-300 hover:text-violet-800;
+  }
+}
+
+@layer components {
+  .display-none {
+    @apply hidden;
+  }
+}
+/*  */
