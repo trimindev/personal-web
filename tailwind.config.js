@@ -5,6 +5,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        betterhover: { raw: "(hover: hover)" },
+      },
       boxShadow: {
         full: "0 0 0 1px #ffffff26;",
       },

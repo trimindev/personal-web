@@ -21,6 +21,12 @@
       "@/styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/projects/import-img.js",
+    "data/projects/export.tsport.js"
+  ],
   "exclude": ["node_modules"]
 }

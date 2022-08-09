@@ -9,6 +9,7 @@ interface Post {
 }
 
 export interface PostMeta {
+  img: string;
   slug: string;
   title: string;
   time: number;
@@ -16,11 +17,10 @@ export interface PostMeta {
   date: string;
 }
 
-const POSTS_PATH = path.join(process.cwd(), "posts");
+const POSTS_PATH = path.join(process.cwd(), "data/posts/MDX");
 
 export const getSlugs = (): string[] => {
   const paths = sync(`${POSTS_PATH}/*.mdx`);
-  console.log(paths);
 
   return paths.map((path) => {
     const parts = path.split("/");
@@ -34,11 +34,15 @@ export const getAllPosts = () => {
   const posts = getSlugs()
     .map((slug) => getPostFromSlug(slug))
     .sort((a, b) => {
-      if (a.meta.date > b.meta.date) return 1;
-      if (a.meta.date < b.meta.date) return -1;
-      return 0;
-    })
-    .reverse();
+      // if (a.meta.date > b.meta.date) return 1;
+      // if (a.meta.date < b.meta.date) return -1;
+      // return 0;
+
+      var aa = a.meta.date.split("/").reverse().join(),
+        bb = b.meta.date.split("/").reverse().join();
+      return aa < bb ? 1 : aa > bb ? -1 : 0;
+    });
+
   return posts;
 };
 
@@ -47,14 +51,21 @@ export const getPostFromSlug = (slug: string): Post => {
   const source = fs.readFileSync(postPath);
   const { content, data } = matter(source);
 
+  // const dateArr = data.date.split("/");
+
+  // const date = new Date(+dateArr[2], +dateArr[0], +dateArr[1]);
+
+  // console.log(date);
+
   return {
     content,
     meta: {
       slug,
+      img: data.img,
       title: data.title ?? slug,
       time: data.time,
       tags: (data.tags ?? []).sort(),
-      date: (data.date ?? new Date()).toString(),
+      date: data.date ?? data.date,
     },
   };
 };

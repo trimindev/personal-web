@@ -3,18 +3,92 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     @apply dark:bg-darkgray-8 bg-darkwhite-9 dark:text-darkwhite-9 text-darkgray-8;
   }
 
   a {
-    @apply dark:hover:text-violet-300 hover:text-violet-800;
+    @apply dark:betterhover:hover:text-violet-300 betterhover:hover:text-violet-800 duration-100;
+  }
+
+  h1 {
+    @apply font-bold text-xl sm:text-2xl;
+  }
+
+  h2 {
+    @apply font-bold text-lg sm:text-xl;
+  }
+
+  pre code {
+    @apply rounded-lg mb-4 sm:mb-4 text-sm sm:text-base;
+  }
+
+  .post p {
+    @apply pb-2 sm:pb-3 text-lg sm:text-xl;
+  }
+  .post h1 {
+    @apply pb-5 sm:pb-7 pt-7 sm:pt-10  text-2xl sm:text-3xl;
+  }
+
+  .post h2 {
+    @apply pb-2 sm:pb-4 font-bold pt-3 sm:pt-6 text-xl sm:text-2xl;
+  }
+
+  .post h3 {
+    @apply pb-2 sm:pb-3 font-semibold text-lg sm:text-xl;
+  }
+
+  /* .post ul {
+    @apply pl-3 sm:pl-5 text-lg sm:text-xl;
+  } */
+  .post li {
+    @apply pl-3 sm:pl-5 pb-2 sm:pb-3 text-lg sm:text-xl flex;
+  }
+
+  .post span {
+    @apply pr-1;
+  }
+
+  .post a {
+    @apply pb-3 dark:text-darkwhite-9 text-darkgray-8;
+  }
+
+  .post li p {
+    @apply pb-0;
+  }
+
+  .post p a {
+    @apply dark:text-violet-300 text-violet-800;
+  }
+
+  .post hr {
+    @apply my-2 dark:text-darkwhite-9 text-darkgray-8;
+  }
+
+  .post img {
+    @apply rounded-lg pb-2 sm:pb-10;
   }
 }
 
 @layer components {
   .display-none {
     @apply hidden;
+  }
+
+  .background {
+    @apply bg-white dark:bg-darkgray-9;
+  }
+
+  .tags {
+    @apply font-semibold text-sm sm:text-base py-2 px-2 sm:px-4 sm:py-3  border-2 rounded-md betterhover:hover:scale-105;
+  }
+
+  .layout__post {
+    @apply background rounded-lg shadow-full;
   }
 }
 /*  */
