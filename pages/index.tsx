@@ -167,7 +167,7 @@ function Home() {
 
       <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
         <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
-          {`<Achivements/> 🏆`}
+          {`<Certifications/> `}
         </h1>
 
         <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
@@ -184,27 +184,22 @@ function Home() {
           <li className="flex">
             <span className="mr-1">📜</span> C2-CEFR EF SET Certificate
           </li>
-          <li className="flex">
-            <span className="mr-1">🥈</span> 2 silver medal - Olympic Math Ho
-            Chi Minh City
-          </li>
         </ul>
       </div>
 
       <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
         <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
-          {`<Education/> 📚`}
+          {`<Education/> `}
         </h1>
-
         <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
 
         <ul className="sm:px-16  py-2 px-7 font-normal text-lg flex flex-col gap-5">
           <li className="flex">
-            <span className="mr-1">📕</span>
+            <span className="mr-1">📚</span>
             <div>
               Studied E-Commerce at University of{" "}
               <span className="font-semibold">Information Technology</span> ,
-              HCM (UIT) for 2 years [2019 - 2021] had quit
+              HCM (UIT) Grade: 2 (had dropped out)
             </div>
           </li>
         </ul>
@@ -212,7 +207,7 @@ function Home() {
 
       <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
         <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
-          {`<Languages/> 💬`}
+          {`<Languages/> `}
         </h1>
 
         <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
@@ -227,18 +222,38 @@ function Home() {
 
       <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
         <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
-          {`<Activites/> 🤸🏻‍♂️`}
+          {`<Activity/> `}
         </h1>
 
         <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
 
         <ul className="sm:px-16  py-1 px-7 font-normal text-lg flex flex-col gap-5">
           <li className="flex">
-            <span className="mr-1">🎗</span>
-            <div>
-              Achieved Excellent Volunteer prize in Spring Volunteer campaign
-              UIT 2019
-            </div>
+            <span className="mr-1">📽</span>
+            <div>Media Planner - Spring Volunteer Campain UIT 2019</div>
+          </li>
+        </ul>
+      </div>
+
+      <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
+        <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
+          {`<Awards/> `}
+        </h1>
+
+        <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
+
+        <ul className="sm:px-16  py-2 px-7 font-normal text-lg flex flex-col gap-5">
+          <li className="flex">
+            <span className="mr-1">🏅</span>Excellent Volunteer prize in Spring
+            Volunteer Campain UIT 2019
+          </li>
+          <li className="flex">
+            <span className="mr-1">🥈</span>Silver Medal - Olympic Math Ho Chi
+            Minh City 2018
+          </li>
+          <li className="flex">
+            <span className="mr-1">🥈</span>Silver Medal - Olympic Math Ho Chi
+            Minh City 2017
           </li>
         </ul>
       </div>
