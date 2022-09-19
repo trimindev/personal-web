@@ -207,7 +207,7 @@ function Home() {
 
       <div className="shadow-full rounded-lg dark:bg-darkgray-9 bg-white py-4">
         <h1 className="font-bold px-4 sm:px-6  text-xl sm:text-2xl">
-          {`<Languages/> `}
+          {`<Language/> `}
         </h1>
 
         <div className=" my-4 h-0.5 w-full dark:bg-darkgray-8 bg-darkwhite-9 "></div>
