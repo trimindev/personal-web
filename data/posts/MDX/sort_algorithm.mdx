@@ -47,7 +47,7 @@ const bubbleSort = (arr) => {
 
     if (isOrdered) break;
   }
-  return array;
+  return arr;
 };
 ```
 
@@ -195,64 +195,38 @@ Space Complexity : O(n)
 <PostImage src="heap_sort.png" />
 
 ```js
-const buildMaxHeap = (arr) => {
-  let i = Math.floor(arr.length / 2 - 1);
-
-  while (i >= 0) {
-    heapify(arr, i, arr.length);
-    i--;
-  }
+const swap = (arr, a, b) => {
+  [arr[a], arr[b]] = [arr[b], arr[a]];
 };
 ```
 
 ```js
-const heapify = (heap, i, max) => {
-  let index;
-  let leftChild;
-  let rightChild;
+const heapify = (arr, length, i) => {
+  const left = i * 2 + 1;
+  const right = left + 1;
+  let max = i;
 
-  while (i < max) {
-    index = i;
+  if (left < length && arr[left] > arr[max]) max = left;
+  if (right < length && arr[right] > arr[max]) max = right;
 
-    leftChild = 2 * i + 1;
-
-    rightChild = leftChild + 1;
-
-    if (leftChild < max && heap[leftChild] > heap[index]) {
-      index = leftChild;
-    }
-
-    if (rightChild < max && heap[rightChild] > heap[index]) {
-      index = rightChild;
-    }
-
-    if (index === i) {
-      return;
-    }
-
-    swap(heap, i, index);
-
-    [heap[i], arr[index]] = [arr[index], arr[i]];
-
-    i = index;
+  if (max !== i) {
+    swap(arr, i, max);
+    heapify(arr, length, max);
   }
 };
 ```
 
 ```js
 const heapSort = (arr) => {
-  buildMaxHeap(arr);
+  const length = arr.length;
 
-  lastElement = arr.length - 1;
+  for (let i = Math.floor(length / 2 - 1); i >= 0; i--) {
+    heapify(arr, length, i);
+  }
 
-  while (lastElement > 0) {
-    swap(arr, 0, lastElement);
-
-    [arr[0], arr[lastElement]] = [arr[lastElement], arr[0]];
-
-    heapify(arr, 0, lastElement);
-
-    lastElement--;
+  for (let i = length - 1; i > 0; i--) {
+    swap(arr, 0, i);
+    heapify(arr, i, 0);
   }
 
   return arr;
