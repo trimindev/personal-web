@@ -1,7 +1,7 @@
 [
   {
     "img": "blog.png",
-    "title": "My Fullstack Responsive Dark Mode ( Blog + Portfolio + CV )",
+    "title": "Responsive Dark Mode ( Blog + Portfolio + CV )",
     "tags": [
       "tailwindcss",
       "nextjs",
@@ -16,7 +16,7 @@
   },
   {
     "img": "netflix.png",
-    "title": "Fullstack Responsive Netflix Clone ",
+    "title": "Responsive Netflix Clone ",
     "tags": [
       "tailwindcss",
       "nextjs",
