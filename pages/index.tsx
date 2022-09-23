@@ -102,7 +102,7 @@ function Home() {
             height={40}
             onClick={() => {
               window.open(
-                "mailto:triminhnguyen.dev@gmail.com?subject=subject&cc=cc@gmail.com"
+                "mailto:trimindev@gmail.com?subject=subject&cc=cc@gmail.com"
               );
             }}
             className="cursor-pointer betterhover:hover:scale-110"
@@ -110,14 +110,14 @@ function Home() {
         </div>
 
         <div
-          onClick={() => copyToClipBoard("triminhnguyen.dev@gmail.com")}
+          onClick={() => copyToClipBoard("trimindev@gmail.com")}
           className={`mt-7 cursor-pointer  dark:betterhover:hover:border-green-400 border-2  rounded-lg p-3 bg-darkwhite-9  dark:bg-darkgray-8 flex gap-x-4 items-center  ${
             copySuccess == true
               ? "border-green-600  dark:border-green-400"
               : "border-darkgray-9 dark:border-violet-400"
           }`}
         >
-          <p className="font-medium ">triminhnguyen.dev@gmail.com</p>
+          <p className="font-medium "> trimindev@gmail.com </p>
           <Image
             src={
               currentTheme === "dark"
@@ -135,7 +135,7 @@ function Home() {
         </div>
 
         <a
-          href="https://drive.google.com/file/d/1WJO2u6dkViTO49xZ4734IkzypvuEkHxy/view?usp=sharing"
+          href="https://drive.google.com/file/d/1yAM-P3eGYYKY2pcL6aj0PTRpw2Ch3wEe/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
           className="my-5 rounded-lg p-3  bg-darkgray-9 dark:bg-violet-600 betterhover:hover:text-white text-white dark:betterhover:hover:text-darkwhite-9 dark:text-darkwhite-9 font-semibold betterhover:hover:bg-darkgray-11 dark:betterhover:hover:bg-violet-500  dark:betterhover:hover:ring-offset-violet-300 betterhover:hover:scale-105 "
@@ -161,6 +161,7 @@ function Home() {
           <p className="tags border-purple-600 text-purple-600">#Redux</p>
           <p className="tags border-cyan-500 text-cyan-500">#TailwindCSS</p>
           <p className="tags border-violet-700 text-violet-700">#Git</p>
+          <p className="tags  border-sky-400 text-sky-400">#Docker</p>
           {/* <p className="tags border-sky-400 text-sky-400">#Docker</p> */}
         </div>
       </div>
