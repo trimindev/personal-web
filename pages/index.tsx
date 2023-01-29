@@ -161,7 +161,6 @@ function Home() {
           <p className="tags border-purple-600 text-purple-600">#Redux</p>
           <p className="tags border-cyan-500 text-cyan-500">#TailwindCSS</p>
           <p className="tags border-violet-700 text-violet-700">#Git</p>
-          <p className="tags  border-sky-400 text-sky-400">#Docker</p>
           {/* <p className="tags border-sky-400 text-sky-400">#Docker</p> */}
         </div>
       </div>
