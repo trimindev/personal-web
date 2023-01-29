@@ -1,0 +1,209 @@
+---
+title: ReactJs Interview Questions P1
+
+img: reactjs_interview.png
+time: 45
+tags:
+  - reactjs
+  - interview
+date: 20/8/2022
+---
+
+mình có cóp nhặt content mỗi nơi 1 ít rồi biên dịch chiết xuất lại theo style “minimalism” do không giỏi viết văn, nhưng an tâm là vẫn khá là đầy đủ cho các bro nào hay quên như mình vào search lại lúc cần nha !
+
+à mấy từ tiếng Anh nào mình thấy không cần thiết phải dịch thì mình sẽ để vậy luôn nên ai không hiểu thì tự google nhé.
+
+- [<span>•</span>What is ReactJs ? Why use it ?](#what-is-reactjs--why-use-it-)
+
+- [<span>•</span>What is JSX ?](#what-is-jsx-)
+
+- [<span>•</span>What is Components ?](#what-is-components-)
+
+- [<span>•</span>What is Virtual Dom ?](#what-is-virtual-dom-)
+
+- [<span>•</span>How do you pass data to React components ?](#how-do-you-pass-data-to-react-components)
+
+- [<span>•</span>What is the difference between state and props ?](#what-is-the-difference-between-state-and-props-)
+
+- [<span>•</span>Can web browsers read JSX directly ?](#can-web-browsers-read-jsx-directly-)
+
+- [<span>•</span>What is Props drilling ?](#what-is-props-drilling-)
+
+- [<span>•</span>What are the different ways to style a React component ?](#what-are-the-different-ways-to-style-a-react-component-)
+
+- [<span>•</span>What is StrictMode in React ?](#what-is-strictmode-in-react-)
+
+## What is ReactJs ? Why use it ?
+
+- <span>•</span>
+  Là JavaScript library, không phải là framework.
+
+- <span>•</span>
+  Giúp xây dựng user interfaces (UI) 1 cách dễ dàng hơn với JSX.
+
+- <span>•</span>
+  Cho phép chúng ta tái sử dụng và kết hợp UI bằng các component.
+
+- <span>•</span>
+  Có thể xử lí logic trong component với React hook.
+
+- <span>•</span>
+  Sử dụng Virtual DOM để tự động cập nhật UI khi data thay đổi mà không cần update
+  Real DOM.
+
+- <span>•</span>
+  Hỗ trợ server-side rendering.
+
+## What is JSX ?
+
+- <span>•</span>
+  Là một phần mở rộng syntax cho JavaScript.
+
+- <span>•</span>
+  Cho phép chúng ta Viết HTML + JavaScript trong cùng 1 file jsx.
+
+- <span>•</span>
+  Được sử dụng với ReactJs để xây dựng UI 1 cách dễ dàng hơn.
+
+## What is Components ?
+
+- <span>•</span>Là nền tảng của ReactJs, một React app sẽ gồm nhiều components
+  kết hợp lại với nhau.
+
+- <span>•</span>Cho phép chúng ta chia UI thành các phần độc lập để dễ dàng xử
+  lí và tái sử dụng.
+
+- <span>•</span> Có 2 loại component: Functional Components (stateless components)
+  và Class Components (stateful components)
+
+## What is Virtual Dom ?
+
+- <span>•</span>Là 1 bản đại diện nhưng nhẹ hơn của Real Dom.
+
+- <span>•</span>Khi state của một object thay đổi, Virtual Dom chỉ thay đổi
+  object đó trong Real Dom thay vì cập nhật tất cả.
+
+## How do you pass data to React components ?
+
+Có 2 cách chính :
+
+- Props
+
+```js
+function Blog() {
+  const post = { title: "My Blog Post!" };
+
+  return <BlogPost post={post} />;
+}
+```
+
+```js
+function BlogPost(props) {
+  return <h1>{props.post.title}</h1>;
+}
+```
+
+- Context API:
+
+```js
+import { createContext, useContext } from "react";
+
+const PostContext = createContext();
+
+function App() {
+  const post = { title: "My Blog Post!" };
+
+  return (
+    <PostContext.Provider value={post}>
+      <Blog />
+    </PostContext.Provider>
+  );
+}
+
+function Blog() {
+  return <BlogPost />;
+}
+
+function BlogPost() {
+  const post = useContext(PostContext);
+
+  return <h1>{post.title}</h1>;
+}
+```
+
+## What is the difference between state and props ?
+
+- <span>•</span> State là value chúng ta có thể đọc và update, còn Props là value
+  chỉ có thể đọc ( không nên update )
+
+- <span>•</span> State và Props giống nhau ở điểm là khi nó thay đổi đều sẽ re-render
+  lại component
+
+## Can web browsers read JSX directly ?
+
+- <span>•</span> Browsers chỉ có thể đọc các javascript objects, để có thể đọc được
+  file JSX ta cần sử dụng trình thông dịch Babel.
+
+## What is Props drilling ?
+
+- <span>•</span> Là thuật ngữ chỉ việc truyền các props từ component cha xuống các
+  component thấp hơn, có thể sẽ có các component trung gian không cần đến props đấy.
+
+- <span>•</span> Ưu điểm của Props drilling là sự rõ ràng, giúp code đọc dễ hiểu
+  hơn.
+
+- <span>•</span> Nhược điểm là khi app scale lên, việc truyền props qua nhiều component
+  sẽ gặp một số vấn đề như data bị biến đổi kiểu dữ liệu, truyền quá nhiều props
+  không cần thiết, props bị đổi tên... khiến cho việc kiểm soát khó khăn hơn.
+
+- <span>•</span>Để khắc phục ta có thể sử dụng redux, reactContext API,
+  Recoil...
+
+## What are the different ways to style a React component ?
+
+- <span>•</span>Inline styling
+
+```js
+const headerStyle = {
+  margin: '10px';
+}
+
+const Header = () => <div style={headerStyle}></div>;
+
+export default Header;
+```
+
+- <span>•</span>CSS Stylesheet
+
+```js
+import "./style.css";
+
+const Header = () => <div className="header"></div>;
+
+export default Header;
+```
+
+- <span>•</span>CSS in JS ex: using Styled-Components
+
+```js
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background-color: black;
+  color: white;
+`;
+
+const Component = () => <StyledButton>Login</StyledButton>;
+
+export default Component;
+```
+
+## What is StrictMode in React ?
+
+- <span>•</span> Được hiểu giống như một component trợ giúp chúng ta viết code component
+  tốt hơn.
+
+- <span>•</span>warning trong Console.log nếu component đó không tuân theo những
+  quy định được khuyến nghị, hoặc không được dùng nữa
+
+- <span>•</span>Giúp bạn ngăn ngừa được những tác dụng phụ tiềm ẩn.

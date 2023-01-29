@@ -1,0 +1,242 @@
+---
+title: Sorting Algorithm Interview Questions
+
+img: sort_algorithm.jpg
+time: 45
+tags:
+  - algorithm
+  - javascript
+  - interview
+date: 30/8/2022
+---
+
+mình có cóp nhặt content mỗi nơi 1 ít rồi biên dịch chiết xuất lại theo style “minimalism” do không giỏi viết văn, nhưng an tâm là vẫn khá là đầy đủ cho các bro nào hay quên như mình vào search lại lúc cần nha !
+
+à mấy từ tiếng Anh nào mình thấy không cần thiết phải dịch thì mình sẽ để vậy luôn nên ai không hiểu thì tự google nhé.
+
+- [<span>•</span>Bubble Sort](#bubble-sort)
+
+- [<span>•</span>Selection Sort](#selection-sort)
+
+- [<span>•</span>Insertion Sort](#insertion-sort)
+
+- [<span>•</span>Quick Sort](#quick-sort)
+
+- [<span>•</span>Merge Sort](#merge-sort)
+
+- [<span>•</span>Heap Sort](#heap-sort)
+
+# Bubble Sort
+
+<PostImage src="bubblesort.png" w={500} r={1.9 / 3} />
+
+```js
+const bubbleSort = (arr) => {
+  let isOrdered;
+
+  for (let i = 0; i < arr.length; i++) {
+    isOrdered = true;
+
+    for (let x = 0; x < arr.length - 1 - i; x++) {
+      if (arr[x] > arr[x + 1]) {
+        [arr[x], arr[x + 1]] = [arr[x + 1], arr[x]];
+
+        isOrdered = false;
+      }
+    }
+
+    if (isOrdered) break;
+  }
+  return arr;
+};
+```
+
+Time Complexity : O(n^2)
+
+Space Complexity : O(1)
+
+# Selection Sort
+
+<PostImage src="selectionsort.jpg" w={500} r={1} />
+
+```js
+const selectionSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let min = i;
+
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+
+    if (min !== i) {
+      [arr[i], arr[min]] = [arr[min], arr[i]];
+    }
+  }
+
+  return arr;
+};
+```
+
+Time Complexity : O(n^2)
+
+Space Complexity : O(1)
+
+# Insertion Sort
+
+<PostImage src="insertion_sort.jpg" w={300} r={5.25 / 4} />
+
+```js
+const insertionSort = (arr) => {
+  for (let i = 1; i < arr.length; i++) {
+    let current = arr[i];
+
+    let j = i - 1;
+    while (j > -1 && current < arr[j]) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = current;
+  }
+  return arr;
+};
+```
+
+Time Complexity : O(n^2)
+
+Space Complexity : O(1)
+
+# Quick Sort
+
+<PostImage src="quicksort.png" />
+
+```js
+const partition = (arr, start, end) => {
+  const pivotValue = arr[end];
+  let pivotIndex = start;
+
+  for (let i = start; i < end; i++) {
+    if (arr[i] < pivotValue) {
+      [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]];
+
+      pivotIndex++;
+    }
+  }
+
+  [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]];
+  return pivotIndex;
+};
+```
+
+```js
+const partitionRecursive = (arr, start, end) => {
+  if (start >= end) {
+    return;
+  }
+
+  const pivotIndex = partition(arr, start, end);
+
+  partitionRecursive(arr, start, pivotIndex - 1);
+  partitionRecursive(arr, pivotIndex + 1, end);
+};
+```
+
+```js
+const quickSort = (arr) => {
+  partitionRecursive(arr, 0, arr.length - 1);
+  return arr;
+};
+```
+
+Time Complexity : O(nlogn)
+
+Space Complexity : O(n)
+
+# Merge Sort
+
+<PostImage src="merge_sort.png" w={500} r={0.96} />
+
+```js
+const merge = (left, right) => {
+  let arr = [];
+
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      arr.push(left.shift());
+    } else {
+      arr.push(right.shift());
+    }
+  }
+
+  return [...arr, ...left, ...right];
+};
+```
+
+```js
+const mergeSort = (arr) => {
+  const half = arr.length / 2;
+
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  const left = arr.splice(0, half);
+  return merge(mergeSort(left), mergeSort(arr));
+};
+```
+
+Time Complexity : O(nlogn)
+
+Space Complexity : O(n)
+
+# Heap Sort
+
+<PostImage src="heap_sort.png" />
+
+```js
+const swap = (arr, a, b) => {
+  [arr[a], arr[b]] = [arr[b], arr[a]];
+};
+```
+
+```js
+const heapify = (arr, length, i) => {
+  const left = i * 2 + 1;
+  const right = left + 1;
+  let max = i;
+
+  if (left < length && arr[left] > arr[max]) max = left;
+  if (right < length && arr[right] > arr[max]) max = right;
+
+  if (max !== i) {
+    swap(arr, i, max);
+    heapify(arr, length, max);
+  }
+};
+```
+
+```js
+const heapSort = (arr) => {
+  const length = arr.length;
+
+  for (let i = Math.floor(length / 2 - 1); i >= 0; i--) {
+    heapify(arr, length, i);
+  }
+
+  for (let i = length - 1; i > 0; i--) {
+    swap(arr, 0, i);
+    heapify(arr, i, 0);
+  }
+
+  return arr;
+};
+```
+
+Time Complexity : O(nlogn)
+
+Space Complexity : O(1)
+
+<br />
+
+Thank you !!!

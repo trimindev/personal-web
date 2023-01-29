@@ -1,0 +1,54 @@
+[
+  {
+    "img": "blog.png",
+    "title": "Responsive Dark Mode ( Blog + Portfolio + CV )",
+    "tags": [
+      "tailwindcss",
+      "nextjs",
+      "typescript",
+      "mdx",
+      "darkmode",
+      "rehype",
+      "api"
+    ],
+    "github": "https://github.com/trimindev/trimindev",
+    "link": "https://trimindev.vercel.app/"
+  },
+  {
+    "img": "netflix.png",
+    "title": "Responsive Netflix Clone ",
+    "tags": [
+      "tailwindcss",
+      "nextjs",
+      "typescript",
+      "auth",
+      "firebase",
+      "recoil",
+      "MUI",
+      "reactcontext"
+    ],
+    "github": "https://github.com/trimindev/netflix",
+    "link": "https://netflix-trimindev.vercel.app/"
+  },
+  {
+    "img": "coffee.png",
+    "title": "Responsive Coffee Website",
+    "tags": ["html", "css", "javascript", "mixitup"],
+    "github": "https://github.com/trimindev/coffee",
+    "link": "https://trimindev.github.io/coffee/"
+  },
+  {
+    "img": "biolink.png",
+    "title": "My Bio Link + 3D Background ",
+    "tags": ["html", "css", "javascript", "vantajs"],
+    "github": "https://github.com/trimindev/bio-link",
+    "link": "https://trimindev.github.io/bio-link/"
+  },
+  {
+    "img": "juice.png",
+    "title": "Responsive Juice Page",
+    "tags": ["html", "css", "javascript", "gsap"],
+    "github": "https://github.com/trimindev/juice",
+    "link": "https://trimindev.github.io/juice/"
+  }
+]

@@ -1,0 +1,125 @@
+---
+title: JavaScript Interview Questions P1
+img: javascript_interview.png
+time: 25
+tags:
+  - javascript
+  - interview
+date: 1/9/2022
+---
+
+mình có cóp nhặt content mỗi nơi 1 ít rồi biên dịch chiết xuất lại theo style “minimalism” do không giỏi viết văn, nhưng an tâm là vẫn khá là đầy đủ cho các bro nào hay quên như mình vào search lại lúc cần nha !
+
+à mấy từ tiếng Anh nào mình thấy không cần thiết phải dịch thì mình sẽ để vậy luôn nên ai không hiểu thì tự google nhé.
+
+- [<span>•</span>What is JavaScript ?](#what-is-javascript-)
+
+- [<span>•</span>What are the data types ?](#what-are-the-data-types-)
+
+- [<span>•</span>What's the difference between undefined and null in JavaScript ?](#whats-the-difference-between-undefined-and-null-in-javascript-)
+
+- [<span>•</span>What is the use of isNaN function ?](#what-is-the-use-of-isnan-function-)
+
+- [<span>•</span>What does the Logical && operator do ?](#what-does-the-logical--operator-do-)
+
+- [<span>•</span>What does the Logical || operator do ?](#what-does-the-logical--operator-do-)
+
+- [<span>•</span>What is Self Invoking Function ?](#what-is-self-invoking-function-)
+
+- [<span>•</span>What are difference between function declaration and function expression ?](#what-are-difference-between-function-declaration-and-function-expression-)
+
+- [<span>•</span>What are cookies ?](#what-are-cookies-)
+
+- [<span>•</span>What’s the difference between let and var ?](#whats-the-difference-between-let-and-var-)
+
+## What is JavaScript ?
+
+- <span>•</span>
+  Là web scripting language phổ biến nhất, sử dụng cho cả client-side và server-side,
+  có hỗ trợ OOP.
+
+- <span>•</span>
+  JavaScript code có thể được chèn vào HTML và được thực thi bởi web browser.
+
+## What are the data types ?
+
+- <span>•</span>
+  Các data types được JavaScript hỗ trợ là: string, number, boolean, bigInt, null,
+  undefined.
+
+## What's the difference between undefined and null in JavaScript ?
+
+- <span>•</span>
+  undefined là default value của:
+- <span></span>
+  <span></span>
+  <span>-</span>
+  variable chưa được gán một value cụ thể.
+- <span></span>
+  <span></span>
+  <span>-</span>
+  function không có value trả về rõ ràng.
+- <span></span>
+  <span></span>
+  <span>-</span>
+  property không tồn tại trong object.
+
+- <span>•</span>
+  null là value đại diện cho không có value.
+
+- <span>•</span>
+  khi so sáng null và undefine, chúng ta nhận được true khi sử dụng == và false khi
+  sử dụng ===.
+
+## What is the use of isNaN function ?
+
+- <span>•</span>
+  return true nếu argument không là number, nếu không thì nó là false.
+
+## What does the Logical && operator do ?
+
+- <span>•</span>
+  tìm false expression đầu tiên rồi trả về expression đó, nếu không tìm được thì
+  trả về expression cuối cùng.
+
+## What does the Logical || operator do ?
+
+- <span>•</span>
+  tìm expression có tồn tại đầu tiên và trả về expression đó.
+
+## What is Self Invoking Function ?
+
+- <span>•</span>
+  Là function tự động được gọi.
+
+```js
+(function_name () {
+    return ()
+}) ();
+```
+
+## What are difference between function declaration and function expression ?
+
+Declaration vs Expression
+
+- <span>•</span>
+  phải có name || không có name
+
+- <span>•</span>
+  không yêu cầu gán vào 1 variable || có thể được gán vào 1 variable.
+
+- <span>•</span>
+  được hoisted || không được hoisted.{" "}
+
+## What are cookies ?
+
+- <span>•</span>
+  Là một data nhỏ, đơn giản được gửi từ website và lưu ở browser.
+
+- <span>•</span>
+  Đó là 1 cách để website ghi nhớ infomation và ghi lại hoạt user’s browsing activity.
+
+## What’s the difference between let and var ?
+
+- <span>•</span>
+  var có phạm vi trong function, let có phạm vi trong block.
