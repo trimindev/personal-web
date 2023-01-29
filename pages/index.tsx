@@ -102,7 +102,7 @@ function Home() {
             height={40}
             onClick={() => {
               window.open(
-                "mailto:trimindev@gmail.com?subject=subject&cc=cc@gmail.com"
+                "mailto:triminhnguyen.dev@gmail.com?subject=subject&cc=cc@gmail.com"
               );
             }}
             className="cursor-pointer betterhover:hover:scale-110"
@@ -110,7 +110,7 @@ function Home() {
         </div>
 
         <div
-          onClick={() => copyToClipBoard("triminnguyen.dev@gmail.com")}
+          onClick={() => copyToClipBoard("triminhnguyen.dev@gmail.com")}
           className={`mt-7 cursor-pointer  dark:betterhover:hover:border-green-400 border-2  rounded-lg p-3 bg-darkwhite-9  dark:bg-darkgray-8 flex gap-x-4 items-center  ${
             copySuccess == true
               ? "border-green-600  dark:border-green-400"
