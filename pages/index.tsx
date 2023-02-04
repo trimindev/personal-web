@@ -49,7 +49,7 @@ function Home() {
         </div>
 
         <h1 className="font-bold text-3xl">Tri Minh Nguyen</h1>
-        <p className="font-medium mt-2">frontend software developer</p>
+        <p className="font-medium mt-2">Fullstack Web Developer</p>
 
         <div className="mt-7 flex gap-6">
           <div className="flex items-center gap-1">
