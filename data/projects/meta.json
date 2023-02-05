@@ -1,7 +1,7 @@
 [
   {
     "img": "blog.png",
-    "title": "Responsive Dark Mode ( Blog + Portfolio + CV )",
+    "title": "Blog + Portfolio + CV (Fullstack, Responsive)",
     "tags": [
       "tailwindcss",
       "nextjs",
@@ -14,22 +14,10 @@
     "github": "https://github.com/trimindev/trimindev",
     "link": "https://trimindev.vercel.app/"
   },
-  {
-    "img": "aiimg.png",
-    "title": "FullStack AI-IMG Website",
-    "tags": [
-      "expressjs",
-      "reactjs",
-      "mongodb",
-      "openai-api",
-      "tailwindcss"
-    ],
-    "github": "https://github.com/trimindev/ai-img",
-    "link": "https://aiimg.vercel.app/"
-  },
+ 
   {
     "img": "netflix.png",
-    "title": "Responsive Netflix Clone ",
+    "title": "Netflix Clone Website (Fullstack, Responsive)",
     "tags": [
       "tailwindcss",
       "nextjs",
@@ -44,18 +32,38 @@
     "link": "https://netflix-trimindev.vercel.app/"
   },
   {
+    "img": "aiimg.png",
+    "title": "AI-IMG Fullstack Website",
+    "tags": [
+      "expressjs",
+      "reactjs",
+      "mongodb",
+      "openai-api",
+      "tailwindcss"
+    ],
+    "github": "https://github.com/trimindev/ai-img",
+    "link": "https://aiimg.vercel.app/"
+  },
+  {
     "img": "coffee.png",
-    "title": "Responsive Coffee Website",
+    "title": "Coffee Responsive Website",
     "tags": ["html", "css", "javascript", "mixitup"],
     "github": "https://github.com/trimindev/coffee",
     "link": "https://trimindev.github.io/coffee/"
   },
   {
     "img": "biolink.png",
-    "title": "My Bio Link + 3D Background ",
+    "title": "My Bio Link + 3D Background",
     "tags": ["html", "css", "javascript", "vantajs"],
     "github": "https://github.com/trimindev/bio-link",
     "link": "https://trimindev.github.io/bio-link/"
+  },
+  {
+    "img": "airbnb.png",
+    "title": "Airbnb Fullstack Website",
+    "tags": ["expressjs", "reactjs", "mongodb", "tailwindcss"],
+    "github": "https://github.com/trimindev/airbnb",
+    "link": "https://airbnb-trimindev.vercel.app"
   },
   {
     "img": "juice.png",

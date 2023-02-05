@@ -49,7 +49,7 @@ function Home() {
         </div>
 
         <h1 className="font-bold text-3xl">Tri Minh Nguyen</h1>
-        <p className="font-medium mt-2">Fullstack Web Developer</p>
+        <p className="font-medium mt-2">Web Developer</p>
 
         <div className="mt-7 flex gap-6">
           <div className="flex items-center gap-1">
@@ -154,11 +154,15 @@ function Home() {
           <p className="tags border-pink-500 text-pink-500">#SCSS</p>
           <p className="tags border-yellow-400 text-yellow-400">#JavaScript</p>
           <p className="tags border-blue-400 text-blue-400">#ReactJs</p>
+          <p className="tags border-green-400 text-green-400">#NodeJs</p>
+
           <p className="tags border-sky-600 text-sky-600">#TypeScript</p>
           <p className="tags border-zinc-900 text-zinc-900 dark:border-darkwhite-9 dark:text-darkwhite-9 ">
             #NextJs
           </p>
+
           <p className="tags border-purple-600 text-purple-600">#Redux</p>
+          <p className="tags border-green-700 text-green-700">#MongoDB</p>
           <p className="tags border-cyan-500 text-cyan-500">#TailwindCSS</p>
           <p className="tags border-violet-700 text-violet-700">#Git</p>
           {/* <p className="tags border-sky-400 text-sky-400">#Docker</p> */}
